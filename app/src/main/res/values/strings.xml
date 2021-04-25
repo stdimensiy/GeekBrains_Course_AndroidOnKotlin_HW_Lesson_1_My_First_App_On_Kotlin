@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My First App On Kotlin</string>
+    <string name="motivation_for_action_press">Нажми меня!</string>
+    <string name="waiting_message_button_press">Ожидаю нажатия кнопки...</string>
+    <string name="result_message_button_press">Кнопка нажата! \n Ура, товарищи!</string>
 </resources>
