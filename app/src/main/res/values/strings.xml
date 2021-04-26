@@ -3,4 +3,9 @@
     <string name="motivation_for_action_press">Нажми меня!</string>
     <string name="waiting_message_button_press">Ожидаю нажатия кнопки...</string>
     <string name="result_message_button_press">Кнопка нажата! \n Ура, товарищи!</string>
+    <string name="message_text_empty">Пусто</string>
+    <string name="result_message_SimpleData_class_created">Новый объект SimpleDataClass создан!</string>
+    <string name="result_message_is_not_SimpleData_class">Объект не является SimpleDataClass</string>
+    <string name="simpleData_field_name_prefix">Содержание поля Name: </string>
+    <string name="simpleData_field_content_prefix">Содержание поля Content: </string>
 </resources>
