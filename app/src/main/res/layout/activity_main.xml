@@ -38,7 +38,7 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
-        android:id="@+id/dataClassName"
+        android:id="@+id/dataClassTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/message_text_empty"
@@ -53,6 +53,33 @@
         android:text="@string/message_text_empty"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dataClassName"/>
+        app:layout_constraintTop_toBottomOf="@+id/dataClassTitle"/>
+
+    <TextView
+        android:id="@+id/copyresultActionCreateSimpleClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_text_empty"
+        app:layout_constraintTop_toBottomOf="@id/dataClassContent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/copydataClassTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_text_empty"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyresultActionCreateSimpleClass" />
+
+    <TextView
+        android:id="@+id/copydataClassContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_text_empty"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copydataClassTitle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

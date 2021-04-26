@@ -17,15 +17,29 @@ class MainActivity : AppCompatActivity() {
             textView.text = resources.getString(result_message_button_press)
         }
         // задание 5.1 создание простого data class и вывод его полей на экран
-        val sdc = SimpleDataClass("Простое наименование", "Простое содержание объекта")
+        val sdc = SimpleDataClass(resources.getString(simpleData_field_title_default_text),
+                resources.getString(simpleData_field_content_default_text))
         val resultActionCreateSimpleClass = findViewById<TextView>(R.id.resultActionCreateSimpleClass);
-        val dataClassName = findViewById<TextView>(R.id.dataClassName);
+        val dataClassTitle = findViewById<TextView>(R.id.dataClassTitle);
         val dataClassContent = findViewById<TextView>(R.id.dataClassContent);
-        when(sdc){
+        when (sdc) {
             is SimpleDataClass -> {
                 resultActionCreateSimpleClass.text = resources.getString(result_message_SimpleData_class_created)
-                dataClassName.text = resources.getString(simpleData_field_name_prefix) + sdc.title
-                dataClassContent.text =resources.getString(simpleData_field_content_prefix) + sdc.content
+                dataClassTitle.text = resources.getString(simpleData_field_title_prefix) + sdc.title
+                dataClassContent.text = resources.getString(simpleData_field_content_prefix) + sdc.content
+            }
+            else -> resultActionCreateSimpleClass.text = resources.getString(result_message_is_not_SimpleData_class)
+        }
+        val copyResultActionCreateSimpleClass = findViewById<TextView>(R.id.copyresultActionCreateSimpleClass);
+        val copyDataClassTitle = findViewById<TextView>(R.id.copydataClassTitle);
+        val copyDataClassContent = findViewById<TextView>(R.id.copydataClassContent);
+        val copySdc = sdc.copy(resources.getString(simpleData_field_default_prefix_copy_text) + sdc.title)
+        copySdc.content = resources.getString(simpleData_field_content_test_new_content)
+        when (copySdc) {
+            is SimpleDataClass -> {
+                copyResultActionCreateSimpleClass.text = resources.getString(result_message_SimpleData_class_copied)
+                copyDataClassTitle.text = resources.getString(simpleData_field_title_prefix) + copySdc.title
+                copyDataClassContent.text = resources.getString(simpleData_field_content_prefix) + copySdc.content
             }
             else -> resultActionCreateSimpleClass.text = resources.getString(result_message_is_not_SimpleData_class)
         }

@@ -1,3 +1,3 @@
 package ru.geekbrains.androidonkotlin.hw.myfirstapponkotlin
 
-data class SimpleDataClass(val title: String, val content: String)
+data class SimpleDataClass(val title: String, var content: String)
